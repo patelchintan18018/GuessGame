@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Number</title>
+    <script type="text/javascript" src="GuessNumber.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        #secretnumber{
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: larger;
+        }
+
+        #box {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: darkgoldenrod;
+            box-shadow: 10px 10px 20px;
+        }
+
+        input {
+            margin: 3em 3em 1em;
+            width: 300px;
+            height: 50px;
+            border: 2px solid black;
+            border-radius: 10px;
+            font-size: large;
+            text-align: center;
+        }
+
+        button {
+            margin-bottom: 1em;
+            padding: 5px 10px;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+
+        #result {
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Guess Game</h2>
+    <p>Guess the number between 1 to 20</p>
+    <p id="secretnumber"></p>
+    <div id="box">
+        <input type="number" name="" id="number">
+        <button type="submit" onclick="guess();">Check</button>
+        <button type="reset" onclick="reset();">Reset</button>
+    </div>
+    <div id="result">
+        <p id="display"> start game</p>
+        <p id="attempts"></p>
+        <p id="high-score"> </p>
+    </div>
+
+   
+</body>
+
+</html>
